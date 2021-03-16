@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - Exemplo10</title>
+</head>
+
+<body>
+    <h1>Arrow Function</h1>
+    <p>
+        A palavra-chave <strong>this</strong> representa o objeto Cabecalho,
+        não importa quem chamou a função.
+    </p>
+    <button id="btn">Clique!</button>
+    <p><strong>this</strong> representa:</p>
+    <p id="demo"></p>
+    <script>
+        class Cabecalho {
+            constructor() {
+                this.cor = "vermelha";
+            }
+            mudarCor = () => {
+                document.getElementById("demo").innerHTML += this;
+            }
+        }
+        meuCabecalho = new Cabecalho();
+        // O objeto window chama a função.
+        window.addEventListener("load", meuCabecalho.mudarCor);
+        // O objeto button chama a função.
+        document.getElementById("btn").addEventListener("click", meuCabecalho.mudarCor);
+    </script>
+</body>
+
+</html>

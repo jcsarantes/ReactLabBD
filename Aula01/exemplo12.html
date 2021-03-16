@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 12</title>
+</head>
+<body>
+    <h2>Escopo JavaScript</h2>
+    <p>Fora da "minhaFuncao" a variável nomeCarro é "undefined".</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        // Chamada da função "minhaFuncao".
+        minhaFuncao();
+        // Definição da função "minhaFuncao".
+        function minhaFuncao() {
+            var nomeCarro = "Volvo";
+            document.getElementById("demo1").innerHTML = typeof nomeCarro + " " + nomeCarro;
+        }
+        document.getElementById("demo2").innerHTML = typeof nomeCarro;
+    </script>
+</body>
+</html>

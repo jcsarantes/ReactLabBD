@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 3</title>
+    <!-- Para evitar erro de favicon.ico no Console do Chrome. -->
+    <link rel="shortcut icon" href="#">
+    <!-- 3 CDNs - React, React Dom e Babel -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        /* 
+        Para escrever múltiplas linhas de HTML, como por exemplo,
+        uma lista, coloque o HTML dentro de parenteses. 
+        */
+        const elemento = (
+            <div>
+                <h1>Eu sou um cabeçalho.</h1>
+                <h1>Eu também sou um cabeçalho.</h1>
+            </div>
+        );
+        ReactDOM.render(elemento, document.getElementById('root'));
+    </script>
+</body>
+</html>

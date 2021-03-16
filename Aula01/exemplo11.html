@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 11</title>
+</head>
+<body>
+    <h2>Escopo JavaScript</h2>
+    <p>
+        Uma variável GLOBAL pode ser acessada de qualquer script ou função.
+    </p>
+    <p id="demo"></p>
+    <script>
+        var nomeCarro = "Volvo";
+        // Chamada da funcao "minhaFuncao".
+        minhaFuncao();
+        // Definição da função "minhaFuncao".
+        function minhaFuncao() {
+            document.getElementById("demo").innerHTML = "Eu posso mostrar " +nomeCarro;
+        } 
+    </script>
+</body>
+</html>
